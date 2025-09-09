@@ -1,3 +1,2 @@
-o*
-
-paraser
+*.o
+parser_app
