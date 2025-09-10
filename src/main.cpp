@@ -8,21 +8,18 @@ int main(){
 	string fullName;
 	string email;
 
-	cout << "Enter full name: ";
 	getline(cin, fullName);
-
-	cout << "Enter email: ";
 	getline(cin, email);
 
 	string* firstName = new string;
 	string* lastName = new string;
 
-	Stringutils::parseName(fullName, firstName, lastName);	
-	string usernmae = StringUtils::parseEmail(email);
+	StringUtils::parseName(fullName, firstName, lastName);	
+	string username = StringUtils::getUsername(email);
 
-	cout << "First name: " << *firstName << endl;
-	cout << "Last name: " << *lastName << endl;
-	cout << "Email: " << *email << endl;
+	cout << "First Name: " << *firstName << endl;
+	cout << "Last Name: " << *lastName << endl;
+	cout << "Username: " << username << endl;
 
 	delete firstName;
 	delete lastName;
